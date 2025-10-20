@@ -22,3 +22,11 @@ An interactive Neo4j graph database project modeling a university travel reimbur
 
 ## 🗂️ Project Structure
 
+Info-Modeling/
+│
+├── data/ # CSV files for graph import
+├── queries/ # Cypher scripts for schema and data loading
+├── diagrams/ # ER diagrams (Draw.io/PDF)
+├── reports/ # Memos and project documentation
+├── README.md # Project overview and instructions
+└── LICENSE # MIT License
