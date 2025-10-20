@@ -2,13 +2,6 @@
 
 An interactive Neo4j graph database project modeling a university travel reimbursement workflow. This project uses Cypher queries and CSV data files to build and analyze relationships between travelers, departments, administrators, budget offices, and financial services.
 
-## 🧭 Visualization
-<p align="center">
-  <img src="assets/graph-preview.png" alt="Neo4j Graph Preview" width="85%">
-  <br>
-  <em>Visualization of interconnected nodes: Travelers, Departments, and Services</em>
-</p>
-
 ---
 
 ## 📊 Getting Started
@@ -46,9 +39,9 @@ Info-Modeling/
 
 1. **Clone the repository:**
 
-git clone https://github.com/vrajderiya/Info-Modeling.git
+   git clone https://github.com/vrajderiya/Info-Modeling.git
 
-cd Info-Modeling
+   cd Info-Modeling
 
 
 2. **Start Neo4j Desktop or connect to Neo4j Aura.**
