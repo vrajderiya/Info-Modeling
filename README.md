@@ -32,3 +32,48 @@ Info-Modeling/
 ├── README.md                     # Project overview and instructions
 └── LICENSE                       # MIT License
 ```
+
+---
+
+## ⚙️ Installation & Running
+
+1. **Clone the repository:**
+
+git clone https://github.com/vrajderiya/Info-Modeling.git
+cd Info-Modeling
+
+
+2. **Start Neo4j Desktop or connect to Neo4j Aura.**
+
+3. **Place CSV files from `data/` into Neo4j import directory.**
+
+4. **Run Cypher scripts in `queries/` to create and populate the graph.**
+
+5. **Explore the data and relationships using Neo4j Browser or Bloom.**
+
+---
+
+## 📚 Dataset
+
+The project models data about university travelers (students and employees), reimbursement requests, approval workflows, auditing steps, budgeting department inputs, and university financial services processing—all simulated via CSV files.
+
+---
+
+## 📸 Screenshots
+
+[Group_06-ER-Diagram.drawio.pdf](https://github.com/user-attachments/files/22995502/Group_06-ER-Diagram.drawio.pdf)
+
+
+---
+
+## 🪪 License
+
+This project is licensed under the **MIT License**. Feel free to modify, use, and distribute it with attribution.
+
+---
+
+## 🙋‍♂️ Author
+
+Developed by **[Vraj Deriya](https://github.com/vrajderiya)**  
+For feedback or collaboration, reach out via GitHub.
+
