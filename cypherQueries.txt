@@ -1,0 +1,32 @@
+
+\\1. Transaction Type for traveler
+MATCH (f:universityfinancialservices)
+WHERE f.TravelID = '1005';
+RETURN f.TransactionType;
+
+
+\\2.Total sum of reimbursement
+MATCH(r:reimbursement)
+return sum(toInteger(r.Amount));
+
+
+\\3.What is the type of traveler for ‘Vraj’
+Match(t:traveler)
+where t.Name='Vraj'
+return t.TypeOfTraveler;
+
+\\4.What is the name of the department administrator who audited the reimbursement for traveler ‘1001'?
+match(d:deptadminstration)-[:audits]->(r:reimbursement)
+where r.TravelID='1001'
+return d.Name;
+
+\\5.Amount reimbursed by Charlie
+MATCH (t:traveler)-[r:request]->(m:reimbursement)
+where t.Name='Charlie'
+return m.Amount;
+
+\\6.Degree type for Emmima
+MATCH (t:traveler)-[r:is_a]->(s:student)
+where t.Name='Emmima'
+return s.DegreeType;
+

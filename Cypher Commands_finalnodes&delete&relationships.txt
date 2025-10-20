@@ -1,0 +1,116 @@
+//Cypher Commands:
+
+//traveler
+
+LOAD CSV WITH HEADERS FROM 'file:///traveler.csv' AS row
+create (:traveler { TravelID : row.TravelID, Name : row.Name, Email : row.Email, SSN: row.SSN, TypeOfTraveler :row.TypeOfTraveler});
+
+MATCH (t:traveler)
+RETURN t.TravelID AS TravelID, t.Name AS Name, t.Email AS Email, t.SSN AS SSN, t.TypeOfTraveler AS TypeOfTraveler
+ORDER BY t.TravelID;
+
+//ufs
+
+LOAD CSV WITH HEADERS FROM 'file:///ufs.csv' AS row
+create (:universityfinancialservices { TravelID : row.TravelID, F_Emp_ID : row.F_Emp_ID, TransactionType : row.TransactionType, BeneficiaryAccNo : row.BeneficiaryAccNo, Officer : row.Officer});
+
+MATCH (n:universityfinancialservices)
+RETURN n.TravelID, n.F_Emp_ID, n.TransactionType, n.BeneficiaryAccNo, n.Officer
+ORDER BY n.TravelID;
+
+
+//student 
+
+LOAD CSV WITH HEADERS FROM 'file:///student.csv' AS row
+create (:student { TravelID : row.TravelID, DegreeType : row.DegreeType, Year : row.Year });
+
+MATCH (n:student)
+RETURN n.TravelID, n.DegreeType, n.Year
+ORDER BY n.TravelID;
+
+//employee  
+
+LOAD CSV WITH HEADERS FROM 'file:///employee.csv' AS row
+create (:employee { TravelID : row.TravelID, Position : row.Position});
+
+MATCH (n:employee)
+RETURN n.TravelID, n.Position
+ORDER BY n.TravelID;
+
+
+//reimbursement 
+
+LOAD CSV WITH HEADERS FROM 'file:///reimbursement.csv' AS row
+create (:reimbursement { TravelID : row.TravelID, ReimbursementID : row.ReimbursementID, Amount : row.Amount, TravelDocuments : row.TravelDocuments});
+
+MATCH (n:reimbursement)
+RETURN n.TravelID, n.ReimbursementID, n.Amount, n.TravelDocuments
+ORDER BY n.ReimbursementID;
+
+
+//department Budgeting office
+
+LOAD CSV WITH HEADERS FROM 'file:///deptbudgetingoffice.csv' AS row
+create (:departmentbudgetingoffice { B_Emp_ID : row.B_Emp_ID, ReimbursementID : row.ReimbursementID, DepartmentID : row.DepartmentID, Location : row.Location, BudgetAllocation : row.BudgetAllocation, ApprovalStatus : row.ApprovalStatus });
+
+
+MATCH (n:departmentbudgetingoffice)
+RETURN n.B_Emp_ID, n.ReimbursementID, n.DepartmentID, n.Location, n.BudgetAllocation, n.ApprovalStatus
+ORDER BY n.ReimbursementID;
+
+
+//department administration
+
+LOAD CSV WITH HEADERS FROM 'file:///deptadminstration.csv' AS row
+create (:deptadminstration { UIN : row.UIN, ReimbursementID : row.ReimbursementID, Name : row.Name });
+
+
+MATCH (n:deptadminstration)
+RETURN n.UIN, n.ReimbursementID, n.Name
+ORDER BY n.ReimbursementID;
+
+
+//policies
+
+LOAD CSV WITH HEADERS FROM 'file:///policies.csv' AS row
+create (:policies { Policy_ID : row.Policy_ID, Name : row.Name, Description : row.Description });
+
+
+MATCH (n:policies)
+RETURN n.Policy_ID, n.Name, n.Description
+ORDER BY n.Policy_ID;
+
+//Creation of relationship
+
+MATCH (f:universityfinancialservices), (t:traveler)
+WHERE f.TravelID = t.TravelID
+MERGE (f)-[:reimburses]->(t);
+
+MATCH (s:student), (t:traveler)
+WHERE s.TravelID = t.TravelID
+MERGE (t)-[:is_a]->(s);
+
+MATCH (d:deptadminstration), (r:reimbursement)
+WHERE d.ReimbursementID = r.ReimbursementID
+MERGE (d)-[:audits]->(r);
+
+MATCH (t:traveler), (r:reimbursement)
+WHERE t.TravelID = r.TravelID
+MERGE (t)-[:request]->(r);
+
+MATCH (e:employee), (t:traveler)
+WHERE e.TravelID = t.TravelID
+MERGE (t)-[:is_a]->(e);
+
+MATCH (db:departmentbudgetingoffice), (r:reimbursement)
+WHERE db.ReimbursementID = r.ReimbursementID
+MERGE (db)-[:approves]->(r);
+
+//delete this relationship after creation
+MATCH (t:traveler), (u:universityfinancialservices)
+WHERE t.TravelID = u.TravelID
+MERGE (t)-[:acknowledge]->(u);
+
+//delete command
+MATCH (t)-[r:acknowledge]-(u)
+DELETE r;
