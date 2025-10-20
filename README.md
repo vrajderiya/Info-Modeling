@@ -62,6 +62,8 @@ The project models data about university travelers (students and employees), rei
 
 ## 📸 Screenshots
 
+![Group_06-ER-Diagram drawio](https://github.com/user-attachments/assets/a36d90dc-b1d5-4222-93c8-fcab3c8ef0cf)
+![Group_06-ER-Diagram drawio](https://github.com/user-attachments/assets/f493ee4c-63f7-4237-b657-43665ac165d7)
 
 
 ---
