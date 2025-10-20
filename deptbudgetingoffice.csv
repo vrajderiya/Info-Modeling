@@ -1,0 +1,12 @@
+B_Emp_ID,ReimbursementID,DepartmentID,Location,BudgetAllocation,ApprovalStatus
+655000,100000,123,Champaign,5000,Approved
+655001,100001,123,Champaign,3000,Approved
+655002,100002,123,Urbana,4500,Denied
+655003,100003,123,Champaign,7000,Approved
+655004,100004,123,Urbana,2500,Denied
+655005,100005,123,Urbana,1000,Denied
+655005,100006,123,Urbana,6000,Denied
+655005,100007,123,Urbana,800,Denied
+655002,100008,123,Champaign,900,Approved
+655001,100009,123,Champaign,2000,Approved
+655003,100010,123,Champaign,3000,Approved

@@ -1,0 +1,12 @@
+F_Emp_ID,TravelID,TransactionType,BeneficiaryAccNo,Officer
+666000,1000,Cheque,A123456789,Ryan
+666001,1001,Online Payment,B987654321,Pam
+666002,1002,Cheque,C123123123,Cameron
+666003,1003,Online Payment,D321321321,Howard
+666004,1004,Cheque,E456456456,Amy
+666005,1005,Online Payment,F000000000,Mitchelle
+666005,1006,Online Payment,A123456777,Mitchelle
+666003,1007,Online Payment,A123456778,Howard
+666004,1008,Cheque,A123456779,Amy
+666003,1009,Cheque,A123456780,Howard
+666002,1010,Cheque,A123456781,Cameron

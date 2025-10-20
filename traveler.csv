@@ -1,0 +1,12 @@
+TravelID,Name,Email,SSN,TypeOfTraveler
+1000,Alice,alice@example.com,123-45-6789,Student
+1001,Bob,bob@example.com,987-65-4321,Employee
+1002,Emmima,emmima@example.com,111-22-3333,Student
+1003,Charlie,charlie@example.com,444-55-6666,Employee
+1004,Vraj,vraj@example.com,777-88-9999,Student
+1005,Srivalli,srivalli@gmail.com,777-88-9996,Employee
+1006,Alia,alia12@gmail.com,443-281-3415,Student
+1007,Sarah,sarah21@example.com,556-489-7765,Employee
+1008,Alison,alis@example.com,386-543-7788,Student
+1009,Richard,richard23@gmail.com,343-877-9988,Employee
+1010,Colin ,colin@gmail.com,534-337-5678,Student

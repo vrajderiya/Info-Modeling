@@ -1,0 +1,7 @@
+Policy_ID,Name,Description
+1,Basic Policy,The person should be from the university
+2,Expense Policy,The traveler should not include private expenses
+3,Budget Policy,The budget will be provided according to is travelling 
+4,Vehicle Policy,The employee must have a valid driving license to rent a vehicle
+5,Food Policy,Only 3 meals a day is covered
+6,Alcohol Policy,There is a budget of $50 for this

@@ -1,0 +1,12 @@
+ReimbursementID,TravelID,Amount,TravelDocuments
+100000,1000,250,Receipt_Alice.pdf
+100001,1001,300.5,Receipt_Bob.pdf
+100002,1002,150.75,Receipt_Emmima.pdf
+100003,1003,400,Receipt_Charlie.pdf
+100004,1004,200.25,Receipt_Vraj.pdf
+100005,1005,150.25,Receipt_Srivalli.pdf
+100006,1006,300.5,Receipt_Alia.pdf
+100007,1007,125.25,Receipt_Sarah.pdf
+100008,1008,300.75,Receipt_Alison.pdf
+100009,1009,400.85,Receipt_Richard.pdf
+100010,1010,600.8,Receipt_Colin.pdf
