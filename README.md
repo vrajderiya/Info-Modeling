@@ -1,18 +1,5 @@
 # 🧭 Travel Reimbursement Knowledge Graph (Neo4j)
 
-![Neo4j Badge](https://img.shields.io/badge/Database-Neo4j-blue?style=for-the-badge&logo=neo4j)
-![License Badge](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
-![Status Badge](https://img.shields.io/badge/Status-Completed-success?style=for-the-badge)
-![Language Badge](https://img.shields.io/badge/Language-Cypher-lightgrey?style=for-the-badge&logo=neo4j)
-
----
-
-<p align="center">
-  <img src="assets/banner.png" alt="Project Banner" width="90%">
-  <br>
-  <em>Graph-based modeling of university travel reimbursement workflow</em>
-</p>
-
 ---
 
 ## 🧠 Overview
