@@ -1,7 +1,5 @@
 # 🧭 Travel Reimbursement Knowledge Graph (Neo4j)
 
----
-
 ## 🧠 Overview
 This project models the **University Travel Reimbursement process** using **Neo4j**, a graph database built for relationship-driven analytics.  
 It demonstrates how financial and administrative entities interact across multiple hierarchical layers of approval, auditing, and reimbursement.  
