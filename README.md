@@ -1,50 +1,24 @@
-# 🧭 Travel Reimbursement Knowledge Graph (Neo4j)
+# 🧭 Travel Reimbursement Knowledge Graph
 
-## 🧠 Overview
-This project models the **University Travel Reimbursement process** using **Neo4j**, a graph database built for relationship-driven analytics.  
-It demonstrates how financial and administrative entities interact across multiple hierarchical layers of approval, auditing, and reimbursement.  
-
-With this graph model, users can visualize how **Travelers**, **Departments**, and **Financial Offices** interconnect, enabling data-driven analysis of workflow efficiency and compliance.
+An interactive Neo4j graph database project modeling a university travel reimbursement workflow. This project uses Cypher queries and CSV data files to build and analyze relationships between travelers, departments, administrators, budget offices, and financial services.
 
 ---
 
-## ⚙️ Key Features
-- Constructed a **Neo4j-based graph model** using Cypher queries and dataset imports (CSV).  
-- Modeled **real-world entities** – Traveler, Department, Financial Services, and Policy.  
-- Implemented relationship types like `REQUESTS`, `AUDITS`, `APPROVES`, and `REIMBURSES`.  
-- Solved **cross-platform CSV ingestion issues** (Windows vs macOS compatibility).  
-- Designed **queries and patterns** to analyze workflow dependencies and bottlenecks.
+## 📊 Getting Started
+
+> Launch Neo4j Desktop or Aura, then run Cypher scripts located in the `queries/` folder to create nodes, load data from CSVs in `data/`, and model relationships.
 
 ---
 
-## 🧩 Data Model Overview
-| **Entity** | **Core Attributes** | **Relationships** |
-|-------------|--------------------|-------------------|
-| Traveler | TravelID, Name, Email, SSN, TypeOfTraveler | REQUESTS → Reimbursement |
-| Reimbursement | TravelID, Amount, Documents | AUDITED BY, APPROVED BY, REIMBURSED BY |
-| Department Administrator | Name, UIN | AUDITS → Reimbursement |
-| Budget Office | DepartmentID, Location, BudgetAllocation | APPROVES → Reimbursement |
-| University Financial Services | Officer, TransactionType, Account | REIMBURSES → Reimbursement |
-| Policy | PolicyID, Description | GOVERNED_BY → Reimbursement |
+## 🧰 Features
+
+* 📈 Graph-based modeling of travel reimbursement entities and workflows  
+* 🗂️ Structured data import from CSV files to Neo4j  
+* 🔍 Cypher queries enabling retrieval of request approvals, audit trails, and reimbursement amounts  
+* 🏛️ Enforces organizational policies and compliance conditions  
+* 💾 Includes ER diagram and detailed entity relationships in reimbursements and approvals  
 
 ---
 
-## 🧰 Tech Stack
-| Component | Technology |
-|------------|-------------|
-| Database | Neo4j |
-| Query Language | Cypher |
-| Data Sources | CSV Files |
-| Schema Design | Draw.io |
-| Visualization | Neo4j Browser / Bloom |
+## 🗂️ Project Structure
 
----
-
-## 🚀 Setup Instructions
-
-### Prerequisites
-- [Neo4j Desktop](https://neo4j.com/download/) or [Neo4j Aura Cloud](https://neo4j.com/cloud/aura/)
-- Basic understanding of Cypher Query Language
-- CSV data in the `import` folder
-
-### Steps
